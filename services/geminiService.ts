@@ -3,8 +3,9 @@ import { AnalysisResult } from "../types";
 
 // const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 const ai = new GoogleGenAI({ 
-    apiKey: process.env.API_KEY, 
+    apiKey: 'FAKE_KEY', 
     // 强制 SDK 使用您的 Cloudflare Worker 代理路径
+    // 它会调用 https://<Your Pages URL>/api/gemini
     baseUrl: window.location.origin + '/api/gemini' 
 });
 
