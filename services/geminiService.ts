@@ -1,7 +1,12 @@
 import { GoogleGenAI, Type, Modality } from "@google/genai";
 import { AnalysisResult } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ 
+    apiKey: process.env.API_KEY, 
+    // 强制 SDK 使用您的 Cloudflare Worker 代理路径
+    baseUrl: window.location.origin + '/api/gemini' 
+});
 
 // 1. Analyze the image to get the word, phonetic, description, and color
 export const analyzeImage = async (base64Image: string): Promise<AnalysisResult> => {
