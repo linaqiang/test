@@ -1,0 +1,7 @@
+{
+  "name": "SnapVocab - AI Sticker Learning",
+  "description": "Snap photos of objects, turn them into cute cartoon stickers, and learn their English names and pronunciation.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
